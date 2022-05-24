@@ -25,7 +25,7 @@ const styles = {
   noticeCTA: "font-bold text-green-500 cursor-pointer mt-5",
   rightMain:
     "flex flex-col flex-1 h-4/5 bg-[#1E2123] mt-6 rounded-lg overflow-y-scroll noScroll",
-  rightMainItem: "flex items-center text-white p-5 border-b border-[#30363b]",
+  rightMainItem: "flex items-center justify-between text-white p-5 border-b border-[#30363b]",
   itemTitle: "flex-1 font-bold",
   moreOptions: "cursor-pointer text-x1"
 }
@@ -37,11 +37,11 @@ export default function Home() {
       <div className={styles.mainContainer}>
         <div className={styles.leftMain}>
           <div className={styles.portfolioAmountContainer}>
-            <div className={styles.portfolioAmount}>23 ETH</div>
-            <div className={styles.portfolioPercent}>
+            <p className={styles.portfolioAmount}>23 ETH</p>
+            <p className={styles.portfolioPercent}>
               +0.0008(+0.57%)
               <span className={styles.pastHour}>Past Hour</span>
-            </div>
+            </p>
           </div>
           <div>
             <div className={styles.chartContainer}>
@@ -49,15 +49,15 @@ export default function Home() {
             </div>
           </div>
           <div className={styles.buyingPowerContainer}>
-            <div className={styles.buyingPowerTitle}>Buying Power</div>
-            <div className={styles.buyingPowerAmount}>12 ETH</div>
+            <h3 className={styles.buyingPowerTitle}>Buying Power</h3>
+            <p className={styles.buyingPowerAmount}>12 ETH</p>
           </div>
           <div className={styles.notice}>
             <div className={styles.noticeContainer}>
-              <div className={styles.noticeTitle}>Send Funds</div>
-              <div className={styles.noticeMessage}>
+              <h3 className={styles.noticeTitle}>Send Funds</h3>
+              <p className={styles.noticeMessage}>
                 Transfer your funds here.
-              </div>
+              </p>
               {/* <BuyTokens /> */}
             </div>
             {/* <Notice /> */}
@@ -65,15 +65,19 @@ export default function Home() {
         </div>
         <div className={styles.rightMain}>
           <div className={styles.rightMainItem}>
-            <div className={styles.rightMainItemTitle}>Crypto Currencies</div>
-            <BiDotsHorizontalRounded className={styles.moreOptions} />
+            <h3 className={styles.rightMainItemTitle}>Crypto Currencies</h3>
+            <i>
+              <BiDotsHorizontalRounded className={styles.moreOptions} />
+            </i>
           </div>
           {/* Map through coins and for every coin make an Asset component */}
           {/* Asset */}
 
           <div className={styles.rightMainItem}>
-            <div className={styles.itemTitle}>Lists</div>
-            <AiOutlineHome className={styles.moreOptions} />
+            <h3 className={styles.itemTitle}>Lists</h3>
+            <i>
+              <AiOutlineHome className={styles.moreOptions} />
+            </i>
           </div>
         </div>
       </div>
