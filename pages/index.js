@@ -1,3 +1,5 @@
+// Components
+import Header from '../components/Header';
 
 // Icons
 import { BiDotsHorizontalRounded } from 'react-icons/bi';
@@ -33,7 +35,7 @@ const styles = {
 export default function Home() {
   return (
     <div className={styles.wrapper}>
-      {/* <Header /> */}
+      <Header />
       <div className={styles.mainContainer}>
         <div className={styles.leftMain}>
           <div className={styles.portfolioAmountContainer}>
